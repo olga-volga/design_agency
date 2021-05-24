@@ -1,20 +1,12 @@
-//Обнуление
-*{padding: 0;margin: 0;border: 0;}
-*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-nav,footer,header,aside{display: block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
-input,button,textarea{font-family:inherit;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner{padding:0;border:0;}
-a,a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
-//--------------------
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
+@import "nullstyle.scss";
+//@import "footer.scss";
+//====================================================
+//<ШРИФТЫ>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+/*font-family: 'DM Sans', sans-serif;*/
+//@import url('../fonts/banny-fonts/stylesheet.css');
+//font-family: 'Banny Round';*/
 //====================================================
 //<ПЕРЕМЕННЫЕ>
 $minw: 320;
@@ -35,9 +27,22 @@ $subtitle: rgba(0, 160, 119, 0.5);
 $text: #595E64;
 $lightgray: rgba(255, 255, 255, 0.5);
 $gray: rgba(255, 255, 255, 0.8);
-
+//====================================================
+//<МИКСИНЫ>
+@mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
+@mixin flexorder($fz) {-webkit-order: $fz;-moz-order: $fz;order: $fz;}
 //====================================================
 //<ОСНОВНАЯ СЕТКА>
+body {
+	font-family: 'DM Sans', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+.wrapper {
+	max-width: 1920px;
+	margin: 0 auto;
+	overflow: hidden;
+}
 .container {
 	max-width: $maxw+px;
 	margin: 0 auto;
@@ -53,73 +58,8 @@ $gray: rgba(255, 255, 255, 0.8);
 		padding: 0px 20px;
 	}
 }
-//====================================================
-//@media (max-width: 575.98px) { ... }
-
-// Small devices (landscape phones, less than 768px)
-//@media (max-width: 767.98px) { ... }
-
-// Medium devices (tablets, less than 992px)
-//@media (max-width: 991.98px) { ... }
-
-// Large devices (desktops, less than 1200px)
-//@media (max-width: 1199.98px) { ... }
-//====================================================
-//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
-//@import "header.scss";
-//@import "footer.scss";
-//====================================================
-//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
-//@import "header.scss";
-//@import "footer.scss";
-//====================================================
-//<ШРИФТЫ>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-/*font-family: 'DM Sans', sans-serif;*/
-//@import url('../fonts/banny-fonts/stylesheet.css');
-/*font-family: 'Banny Round';*/
-//====================================================
-//<МИКСИНЫ>
-@mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
-@mixin flexorder($fz) {-webkit-order: $fz;-moz-order: $fz;order: $fz;}
-//====================================================
-//<BUTTONS>
-//.btn {
-	//display: inline-block;
-	//padding: 0px 0px;
-	//&:hover {}
-	//&.fw{width: 100%;}
-//}
-//====================================================
-//<INPUT>
-//input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
-//.input {
-	//border-radius: 0 !important;
-	//width: 100%;
-	//display: block;
-	//padding: 0px 20px;
-	//&.focus{}
-	//&.err{}
-//}
-//textarea.input {
-	//resize: none;
-	//padding: 0px 0px;
-//}
-//====================================================
-body {
-	font-family: 'DM Sans', sans-serif;
-	font-style: normal;
-	font-weight: normal;
-}
-.wrapper {
-	max-width: 1920px;
-	margin: 0 auto;
-	overflow: hidden;
-}
 .btn {
-	//display: block;
 	width: 194px;
-	//height: 61px;
 	padding: 20px 0;
 	font-weight: bold;
 	font-size: 14px;
@@ -190,6 +130,7 @@ body {
 	line-height: 24px;
 	color: $text;
 }
+//====================================================
 
 /*===HEADER===*/
 .header {

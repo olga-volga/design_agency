@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*Обнуление*/
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 * {
   padding: 0;
@@ -60,6 +62,17 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit; }
 
+/*font-family: 'DM Sans', sans-serif;*/
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal; }
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden; }
+
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -74,18 +87,6 @@ h1, h2, h3, h4, h5, h6 {
   @media (max-width: 426px) {
     .container {
       padding: 0px 20px; } }
-
-/*font-family: 'DM Sans', sans-serif;*/
-/*font-family: 'Banny Round';*/
-body {
-  font-family: 'DM Sans', sans-serif;
-  font-style: normal;
-  font-weight: normal; }
-
-.wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-  overflow: hidden; }
 
 .btn {
   width: 194px;
